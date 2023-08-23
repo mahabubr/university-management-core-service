@@ -2,33 +2,32 @@ import express from 'express';
 import { ENUM_USER_ROLE } from '../../../enums/user';
 import auth from '../../middlewares/auth';
 import validateRequest from '../../middlewares/validateRequest';
-import { StudentController } from './student.controller';
-import { StudentValidation } from './student.validation';
+import { BuildingController } from './building.controller';
+import { BuildingValidation } from './building.validation';
 
 const router = express.Router();
 
-router.get('/', StudentController.getAllFromDB);
-
-router.get('/:id', StudentController.getByIdFromDB);
+router.get('/', BuildingController.getAllFromDB);
+router.get('/:id', BuildingController.getByIdFromDB);
 
 router.post(
   '/',
   auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
-  validateRequest(StudentValidation.create),
-  StudentController.insertIntoDB
+  validateRequest(BuildingValidation.create),
+  BuildingController.insertIntoDB
 );
 
 router.patch(
   '/:id',
+  validateRequest(BuildingValidation.update),
   auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
-  validateRequest(StudentValidation.update),
-  StudentController.updateIntoDB
+  BuildingController.updateOneInDB
 );
 
 router.delete(
   '/:id',
   auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
-  StudentController.deleteFromDB
+  BuildingController.deleteByIdFromDB
 );
 
-export const studentRoutes = router;
+export const BuildingRoutes = router;

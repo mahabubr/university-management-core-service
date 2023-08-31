@@ -11,7 +11,7 @@ export const offeredCourseClassScheduleRelationalFieldsMapper: {
   [key: string]: string;
 } = {
   offeredCourseSectionId: 'offeredCourseSection',
-  semesterRegistrationId: 'semesterRegistrationId',
+  semesterRegistrationId: 'semesterRegistration',
   roomId: 'room',
   facultyId: 'faculty',
 };

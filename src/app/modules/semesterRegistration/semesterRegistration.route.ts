@@ -20,8 +20,8 @@ router.post(
 
 router.post(
   '/',
-  validateRequest(SemesterRegistrationValidation.create),
   auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
+  validateRequest(SemesterRegistrationValidation.create),
   SemesterRegistrationController.insertIntoDB
 );
 
@@ -36,6 +36,12 @@ router.delete(
   '/:id',
   auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
   SemesterRegistrationController.deleteByIdFromDB
+);
+
+router.post(
+  '/enroll-into-course',
+  auth(ENUM_USER_ROLE.STUDENT),
+  SemesterRegistrationController.enrollIntoCourse
 );
 
 export const SemesterRegistrationRoutes = router;

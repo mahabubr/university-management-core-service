@@ -1,0 +1,5 @@
+Tue Sep 05 2023 23:3:57 } [PH] error: 
+Invalid `prisma.studentSemesterRegistrationCourse.findMany()` invocation:
+
+
+Transaction API error: Transaction already closed: Could not perform operation.

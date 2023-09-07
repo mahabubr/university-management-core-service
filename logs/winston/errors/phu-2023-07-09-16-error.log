@@ -1,0 +1,41 @@
+Thu Sep 07 2023 16:32:52 } [PH] error: 
+Invalid `prisma.studentSemesterRegistrationCourse.findMany()` invocation:
+
+
+Transaction API error: Transaction already closed: A query cannot be executed on a committed transaction.
+Thu Sep 07 2023 16:47:31 } [PH] error: 
+Invalid `prisma.studentSemesterPayment.create()` invocation:
+
+
+Transaction API error: Transaction already closed: Could not perform operation.
+Thu Sep 07 2023 16:47:44 } [PH] error: 
+Invalid `prisma.studentSemesterPayment.create()` invocation:
+
+
+Transaction API error: Transaction already closed: Could not perform operation.
+Thu Sep 07 2023 16:49:9 } [PH] error: 
+Invalid `prisma.studentSemesterPayment.create()` invocation:
+
+
+Transaction API error: Transaction already closed: Could not perform operation.
+Thu Sep 07 2023 16:52:40 } [PH] error: 
+Invalid `prisma.studentSemesterPayment.create()` invocation:
+
+
+Transaction API error: Transaction already closed: Could not perform operation.
+Thu Sep 07 2023 16:53:19 } [PH] error: 
+Invalid `prisma.studentSemesterPayment.create()` invocation:
+
+
+Transaction API error: Transaction already closed: Could not perform operation.
+Thu Sep 07 2023 16:54:54 } [PH] error: 
+Invalid `prisma.studentSemesterPayment.create()` invocation:
+
+
+Transaction API error: Transaction already closed: Could not perform operation.
+Thu Sep 07 2023 16:56:22 } [PH] error: 
+Invalid `prisma.studentSemesterPayment.create()` invocation:
+
+
+Transaction API error: Transaction already closed: Could not perform operation.
+Thu Sep 07 2023 16:57:35 } [PH] error: object is not iterable (cannot read property Symbol(Symbol.iterator))

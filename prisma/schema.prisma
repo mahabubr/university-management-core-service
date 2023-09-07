@@ -87,6 +87,7 @@ model Student {
   studentEnrolledCourses             StudentEnrolledCourse[]
   studentEnrolledCourseMarks         StudentEnrolledCourseMark[]
   studentSemesterPayments            StudentSemesterPayment[]
+  studentAcademicInfos               StudentAcademicInfo[]
 
   @@map("students")
 }
@@ -367,6 +368,20 @@ model StudentSemesterPayment {
   academicSemester   AcademicSemester @relation(fields: [academicSemesterId], references: [id])
 
   @@map("student_semester_payments")
+}
+
+model StudentAcademicInfo {
+  id                   String @id @default(uuid())
+  totalCompletedCredit Int?   @default(0)
+  cgpa                 Float? @default(0)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  studentId String
+  student   Student @relation(fields: [studentId], references: [id])
+
+  @@map("student_academic_infos")
 }
 
 enum SemesterRegistrationStatus {

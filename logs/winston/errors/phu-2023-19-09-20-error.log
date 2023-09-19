@@ -1,0 +1,31 @@
+Tue Sep 19 2023 20:41:31 } [PH] error: 
+Invalid `prisma.student.create()` invocation:
+
+{
+  data: {
+    studentId: "000100001",
+    firstName: "New",
+    lastName: "hello",
+    middleName: "Forhan",
+    email: "fr23e2@gmail.com",
+    contactNo: "012345454745",
+    gender: "male",
+    bloodGroup: "O+",
+    academicSemesterId: "24188ee8-11be-4d0c-b3cb-245d5c3605f3",
+    academicDepartmentId: "6773d83b-a3fe-4c05-ac60-d6979f760d76",
+    academicFacultyId: undefined,
++   academicSemester: {
++     create: AcademicSemesterCreateWithoutStudentsInput | AcademicSemesterUncheckedCreateWithoutStudentsInput,
++     connectOrCreate: AcademicSemesterCreateOrConnectWithoutStudentsInput,
++     connect: AcademicSemesterWhereUniqueInput
++   }
+  },
+  include: {
+    academicFaculty: true,
+    academicDepartment: true,
+    academicSemester: true
+  }
+}
+
+Argument `academicSemester` is missing.
+Tue Sep 19 2023 20:53:59 } [PH] error: Invalid argument type

@@ -1,0 +1,30 @@
+Mon Sep 18 2023 20:48:17 } [PH] error: 
+Invalid `prisma.student.create()` invocation:
+
+{
+  data: {
+    studentId: "000100018",
+    firstName: "Mezbaul",
+    lastName: "Abedin",
+    middleName: "Forhan",
+    email: "freshsa2@gmail.com",
+    contactNo: "01745745444745",
+    gender: "male",
+    bloodGroup: "O+",
+    academicSemesterId: "9e0f159e-1bee-4920-86f3-d77f12ad7e28",
+    academicDepartmentId: "be26dd23-7470-4b66-b092-d3f1035ea5a5",
+    academicFacultyId: undefined,
++   academicSemester: {
++     create: AcademicSemesterCreateWithoutStudentsInput | AcademicSemesterUncheckedCreateWithoutStudentsInput,
++     connectOrCreate: AcademicSemesterCreateOrConnectWithoutStudentsInput,
++     connect: AcademicSemesterWhereUniqueInput
++   }
+  },
+  include: {
+    academicFaculty: true,
+    academicDepartment: true,
+    academicSemester: true
+  }
+}
+
+Argument `academicSemester` is missing.
